@@ -26,8 +26,6 @@ Some translations are machine-generated and may need refinement.
 
 ## Screenshots
 
-Doom E1M1, with the interface set to English. Captured from the Unity editor.
-
 ![E1M1 in the 2D editor](Screenshots/e1m1-2d.png)
 
 ![E1M1 in the 3D editor](Screenshots/e1m1-3d.png)
