@@ -1,9 +1,0 @@
-﻿Model {ActorName}
-{
-	Model 0 "{ModelPath}{ActorName}.obj"
-
-	USEACTORPITCH
-	USEACTORROLL
-   
-	FrameIndex {Sprite} A 0 0
-}

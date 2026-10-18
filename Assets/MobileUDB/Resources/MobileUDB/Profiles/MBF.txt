@@ -1,0 +1,14 @@
+// Dog #888: MBF editing specification and UDB Dehacked_Doom.cfg Thing 140.
+// GPL-3.0. DOGS sprites may be supplied by connected resources.
+monsters
+{
+    title = "Monsters";
+    888
+    {
+        title = "Dog (MBF)";
+        sprite = "DOGSA";
+        class = "MBFHelperDog";
+        width = 11;
+        height = 28;
+    }
+}

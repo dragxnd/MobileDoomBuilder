@@ -1,0 +1,4 @@
+User-supplied original Doom sprite.
+Source: D:/Doom Wads Jan 2022/_DOOM2_SRC/SPRITES/headd1.png
+SHA256: 6CAD1D66A6AF18A820D70D5939B600B7169CB9994E77E343F11DBE0B1AF9DFA2
+Copied byte-for-byte; no generated replacement or sprite edits.

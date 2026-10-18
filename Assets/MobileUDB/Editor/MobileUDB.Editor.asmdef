@@ -1,0 +1,5 @@
+{
+  "name": "MobileUDB.Editor",
+  "references": ["MobileUDB.Core", "MobileUDB.Runtime"],
+  "includePlatforms": ["Editor"]
+}

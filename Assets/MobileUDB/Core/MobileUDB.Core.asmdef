@@ -1,0 +1,5 @@
+{
+  "name": "MobileUDB.Core",
+  "rootNamespace": "MobileUDB.Core",
+  "noEngineReferences": true
+}

@@ -1,0 +1,6 @@
+// MBF thing flag from Lee Killough's MBF editing specification.
+// GPL-3.0; friendly is the same binary map flag as in UDB MBF21_misc.cfg.
+thingflags
+{
+    128 = "Friendly";
+}

@@ -1,93 +1,49 @@
-# Ultimate Doom Builder
+# Mobile Doom Builder
 
-## System requirements
-- 2.4 GHz CPU or faster (multi-core recommended)
-- Windows 7, 8, 10, or 11
-- Graphics card with OpenGL 3.2 support
+A touch-focused Doom map editor for Android, built with Unity.
 
-### Required software on Windows
-- [Microsoft .Net Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
+Mobile Doom Builder is a mobile fork and adaptation of [Ultimate Doom Builder](https://github.com/UltimateDOOMBuilder/UltimateDOOMBuilder).
 
-## Building on Linux
+Create and edit maps directly on your phone or tablet, with grouped on-screen tools and an interactive 3D view.
 
-__Note:__ this is experimental. None of the main developers are using Linux as a desktop OS, so you're pretty much on your own if you encounter any problems with running the application.
+## Features
 
-### Manual build
+- 2D map editing and interactive 3D editing.
+- Classic Doom maps with Doom, Boom, MBF and MBF21 compatibility profiles.
+- Vertex, linedef, sector and thing editing.
+- Texture previews, alignment and offset controls.
+- Sector joining and merging.
+- Automap editing, sound propagation and blockmap views.
+- WAD loading and saving, recent maps and recovery of the last editing session.
+- Touch navigation with two-finger zoom.
+- Three interface sizes: Large, Medium and Small.
 
-These instructions are for Debian-based distros and were tested with Ubuntu 24.04 LTS and Arch.
+## Supported Languages
 
-- Install Mono
-  - **Ubuntu:** The `mono-complete` package from the Debian repo doesn't include `msbuild`, so you have to install `mono-complete` by following the instructions on the Mono project's website: https://www.mono-project.com/download/stable/#download-lin
-  - **Arch:** mono (and msbuild which is also required) is in the *extra/* repo, which is enabled by default. `sudo pacman -S mono mono-msbuild`
-- Install additional required packages
-  - **Ubuntu:** `sudo apt install make g++ git libx11-dev libxfixes-dev mesa-common-dev`
-  - **Arch:** `sudo pacman -S base-devel`
-    - If you're using X11 display manager you may need to install these packages: `libx11 libxfixes`
-    - If you are not using the proprietary nvidia driver you may need to install `mesa`
-- Go to a directory of your choice and clone the repository (it'll automatically create an `UltimateDoomBuilder` directory in the current directory): `git clone https://github.com/UltimateDoomBuilder/UltimateDoomBuilder.git`
-- Compile UDB: `cd UltimateDoomBuilder && make`
-- Run UDB: `cd Build && ./builder`
-- Alternatively, to compile UDB in debug mode:
-  - Run `make BUILDTYPE=Debug` in the root project directory
-  - This includes a debug output terminal in the bottom panel
+English (default), Russian, French, German, Chinese (Simplified), Chinese (Traditional), Korean, Japanese, Portuguese (Brazil), Portuguese (Portugal) and Spanish.
 
-### Flatpak build
+Some translations are machine-generated and may need refinement.
 
-The advantage of using Flatpak to build a package is that you do not need to install Mono directly into your system, since everything in the build process will be self-contained. This also means that this works on Linux distributions that do not have `msbuild` in their repository.
+## Screenshots
 
-- To build UDB using Flatpak you need both **Flatpak** and **Flatpak Builder**. How they are installed depends on your distribution. For example on Debian-based distributions they can be installed using `sudo apt install flatpak flatpak-builder`. Check your distro's documentation for information on how to install them.
-- Go to a directory of your choice and clone the repository (it'll automatically create an UltimateDoomBuilder directory in the current directory):
-  ```
-  git clone https://github.com/UltimateDoomBuilder/UltimateDoomBuilder.git
-  ``` 
-- Go to the cloned directory:
-  ```
-  cd UltimateDoomBuilder
-  ```
+Doom E1M1, with the interface set to English. Captured from the Unity editor.
 
-- Build the Flatpak. This will also download all required dependencies:
-  ```
-  ./build_flatpak.sh
-  ```
+![E1M1 in the 2D editor](Screenshots/e1m1-2d.png)
 
-- This will create a file in the format `ultimatedoombuilder-<version>.flatpak` in the `Releases` directory. You can now install and run the Flatpak:
+![E1M1 in the 3D editor](Screenshots/e1m1-3d.png)
 
-  ```
-  flatpak install --user Releases/ultimatedoombuilder-<version>.flatpak
-  flatpak run io.github.ultimatedoombuilder.ultimatedoombuilder
-  ```
-### Flatpak build using WSL2
+## Status
 
-You can also build the flatpak on Windows using WSL2.
+Version 0.5 is an early Android release under active development. UDMF and iOS are outside the scope of this release.
 
-#### Initial setup
-- Create the instance. Requires entering a user name and password:
-  ```powershell
-  wsl --install Ubuntu-24.04 --name udb-flatpak-builder
-  ```
-- Install required Flatpak packages and clone the repository, then exit the insance. Requires entering the user password from the previous step:
-  ```bash
-  sudo apt update && sudo apt -y install flatpak flatpak-builder
-  cd ~
-  git clone https://github.com/UltimateDoomBuilder/UltimateDoomBuilder.git
-  exit
-  ```
+Built with **Unity 6000.3.5f2** and C#.
 
-#### Building the flatpak
-- Update the repository and build the flatpak:
-  ```powershell
-  wsl --distribution udb-flatpak-builder --cd ~/UltimateDoomBuilder -- git pull `&`& ./build_flatpak.sh
-  ```
-- Get the flatpak from the UNC path `\\wsl.localhost\udb-flatpak-builder\home\$env:username\UltimateDoomBuilder\Releases`.
-- Stop the instance (optional, it should shut itself down after some time):
-  ```powershell
-  wsl --terminate udb-flatpak-builder
-  ```
+For desktop touch testing, hold **Alt**: the initial cursor position acts as the first finger, and the moving cursor acts as the second.
 
+## Credits and License
 
-# Links
-- [Official thread link](https://forum.zdoom.org/viewtopic.php?f=232&t=66745)
-- [Git builds at DRDTeam.org](https://devbuilds.drdteam.org/ultimatedoombuilder/) 
+Based on Ultimate Doom Builder and the work of its contributors, including the Doom Builder and GZDoom Builder projects.
 
-More detailed info can be found in the **editor documentation** (Refmanual.chm)
+The native node builder uses [ZDBSP](https://github.com/rheit/zdbsp), with its source and license included under `Native/Zdbsp`. Bundled zlib and Noto fonts retain their own licenses.
 
+See [LICENSE.txt](LICENSE.txt) for the GPL-3.0 license. IWAD files are not included; provide your own WAD files. The original Doom sprite used for the application icon belongs to id Software.

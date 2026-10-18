@@ -1,0 +1,5 @@
+<linker>
+  <assembly fullname="MobileUDB.Runtime">
+    <type fullname="MobileUDB.MobileFileBridge" preserve="all" />
+  </assembly>
+</linker>

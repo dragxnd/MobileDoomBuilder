@@ -1,0 +1,4 @@
+{
+  "name": "MobileUDB.Runtime",
+  "references": ["MobileUDB.Core", "Unity.ugui", "Unity.InputSystem"]
+}

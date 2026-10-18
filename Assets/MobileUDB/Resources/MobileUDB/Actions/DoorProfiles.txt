@@ -1,0 +1,21 @@
+// GPL-3.0. Door defaults extracted verbatim from UDB Includes/Game_*.cfg.
+Doom {
+makedoortrack = "DOORTRAK";
+makedoordoor = "BIGDOOR2";
+makedoorceil = "FLAT20";
+}
+Heretic {
+makedoortrack = "WOODWL";
+makedoordoor = "DOORWOOD";
+makedoorceil = "FLOOR04";
+}
+Hexen {
+makedoortrack = "D_END2";
+makedoordoor = "D_WD07";
+makedoorceil = "F_092";
+}
+Strife {
+makedoortrack = "DORTRK01";
+makedoordoor = "DORML01";
+makedoorceil = "F_UNDOOR";
+}

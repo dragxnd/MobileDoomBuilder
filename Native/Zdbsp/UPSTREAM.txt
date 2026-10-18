@@ -1,0 +1,10 @@
+Mobile Doom Builder native node builder
+
+Based on ZDBSP: https://github.com/rheit/zdbsp
+Upstream commit: f324e34c8bdbf9800d53b18ebd578a51fd7f9998
+License: GPL-2.0-or-later; see upstream/COPYING.
+Bundled zlib: see upstream/zlib/LICENSE.
+
+Local adaptations expose a serialized library interface for Unity, rebuild
+BLOCKMAP/REJECT, support UTF-8 Windows paths, replace process termination with
+exceptions, and disable UDMF for this Android release.
